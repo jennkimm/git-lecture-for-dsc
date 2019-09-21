@@ -105,6 +105,7 @@ git status
 ```
 git commit --amend -sm "[message]"
 ```
+```
 git rebase --continue
 ```
 
