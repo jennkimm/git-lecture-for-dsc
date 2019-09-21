@@ -1,70 +1,113 @@
 # DSC first Session - Git
 
 First session for DSC was how to use git.
+This is the commands that i've reviewed
+
+### Basic
+
+
 * Initialize git
 ```
 - git init
 ```
-* add files to log that are gonna be commited
+* Add files to log that are gonna be commited
 ```
 - git add [file name]
 ```
-* commit your files
+* Commit your files
 ```
 -git commit -m "[message]" // -s : add sign for the code
 ```
-* check the current status
+* Check the current status
 ```
 -git status
 ```
-* check the part of the code that you've changed
+* Check the part of the code that you've changed
 ```
 -git diff
 ```
-* check the file that you've comitted
+* Check the file that you've comitted
 ```
 -git log
 ```
 ```
 -git shortlog
 ```
-
+* Connet your remote git repository
 ```
 -git remote add origin [copied URL]
 ```
+* Push yout comitted files
 ```
 -git push origin master
 ```
-* when you want to change commit message -> vi editor would appear
+* When you want to change commit message -> vi editor would appear
 ```
 -git commit --amend 
 ```
-* you can push with --force or -f if commit ID of the local repository is not matched with the git repository. at this moment, you maybe need to pull the git repository first
+* You can push with --force or -f if commit ID of the local repository is not matched with the git repository. at this moment, you maybe need to pull the git repository first
 ```
 -git push origin master --force
 ```
-* if you want to cancel file you've added
+* If you want to cancel file you've added
 ```
 -git reset 
 ```
-* remove the very latest file you've commited
+* Remove the very latest file you've commited
 ```
 -git reset HEAD~1 
 ```
-* make a new branch
+* Make a new branch
 ```
 -git checkout -b develop
 ```
-* clone the git repository
+* Clone the git repository
 ```
 -git clone [git URL]
 ```
-* check which branch are you in 
+* Check which branch are you in 
 ```
 -git branch
 ```
-* merch other branch with that branch you are in now
+* Merge other branch with that branch you are in now
 ```
 git merge [name of the other branch]
 ```
+
+### Advanced
+* Rebase
+
+```
+git remote add upstream [forked one's URL(not my repository)]
+```
+* Get dev branch
+```
+git fetch upstream dev
+```
+* Check current branch
+```
+git status
+```
+* Rebase
+```
+git rebase upstream/dev
+```
+
+* Modify commit that are placed in the middle of other commits
+```
+git rebase -i --root
+```
+* Once vi editor has opened, remove pick and write edit, save it and escape vi editor
+```
+git status
+```
+* modify information of commit, and end with --continue
+```
+git commit --amend -sm "[message]"
+```
+git rebase --continue
+```
+
+
+
 
